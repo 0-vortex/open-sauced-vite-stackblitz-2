@@ -3,6 +3,7 @@
   "startCommand": "npm start",
   "env": {
     "NODE_ENV": "development",
-    "CUSTOM_MESSAGE_1": "👉 HELLO ENV VARIABLE 1 👈"
+    "CUSTOM_MESSAGE_1": "👉 HELLO ENV VARIABLE 1 👈",
+    "GITPOD_WORKSPACE_URL": "stackblitz.dev"
   }
 }
