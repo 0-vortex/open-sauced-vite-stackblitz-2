@@ -1,0 +1,7 @@
+{
+  "installDependencies": true,
+  "startCommand": "npm start",
+  "env": {
+    "GITPOD_WORKSPACE_URL": "stackblitz.dev",
+  }
+}
