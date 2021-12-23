@@ -1,4 +1,8 @@
 {
+  "audit": false,
+  "audit-level": "moderate",
+  "lockfile-version": 3,
   "loglevel": "info",
-  "progress": true
+  "progress": false,
+  "timing": false
 }
