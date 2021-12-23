@@ -18,8 +18,8 @@
   },
   "scripts": {
     "push": "npx @open-sauced/conventional-commit",
-    "start": "vite",
-    "build": "vite build",
+    "start": "npx vite",
+    "build": "npx vite build",
     "serve": "npx vite preview",
     "build:optimize": "npx svgo src/**/*.svg --config ./.svgorc.js",
     "build:analyze": "npm run build -- --mode report",
