@@ -1,0 +1,45 @@
+{
+  "name": "vite-react-starter",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.6",
+    "@primer/octicons-react": "^16.2.0",
+    "@remirror/extension-bold": "^1.0.12",
+    "@remirror/extension-code": "^1.0.13",
+    "@remirror/extension-emoji": "^1.0.13",
+    "@remirror/extension-heading": "^1.0.12",
+    "@remirror/extension-italic": "^1.0.12",
+    "@remirror/extension-list": "^1.2.9",
+    "@remirror/extension-markdown": "^1.0.12",
+    "@remirror/extension-react-tables": "^1.0.19",
+    "@remirror/pm": "^1.0.9",
+    "@remirror/react": "^1.0.19",
+    "@remirror/react-components": "^1.0.18",
+    "@remirror/styles": "^1.1.2",
+    "contrast": "^1.0.1",
+    "dayjs": "^1.10.7",
+    "graphql": "^16.2.0",
+    "humanize-duration": "^3.27.1",
+    "onegraph-apollo-client": "^3.1.2",
+    "onegraph-auth": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-keys": "^2.7.1",
+    "react-loading-skeleton": "^3.0.1",
+    "react-markdown": "^7.1.1",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.2.1",
+    "styled-components": "^5.3.3",
+    "svgmoji": "^3.2.0",
+    "swr": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "vite": "^2.7.2"
+  }
+}
