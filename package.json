@@ -1,5 +1,5 @@
 {
-  "name": "vitejs-open-sauced-stackblitz",
+  "name": "open-sauced-vite-sb-demo",
   "description": "Open Sauced provides structured onboarding for new contributors to open source. This structure provides a way to track your next contributions by leveraging a unique dashboard built on top of the GitHub GraphQL API.",
   "version": "0.41.1",
   "private": true,
@@ -7,10 +7,10 @@
   "files": [
     "build/**/*"
   ],
-  "bugs": "https://github.com/0-vortex/vitejs-open-sauced-stackblitz/issues",
+  "bugs": "https://github.com/0-vortex/open-sauced-vite-sb-demo/issues",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/0-vortex/vitejs-open-sauced-stackblitz.git"
+    "url": "git+ssh://git@github.com/0-vortex/open-sauced-vite-sb-demo.git"
   },
   "engines": {
     "node": ">=14",
