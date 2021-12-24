@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import ViteReact from '@vitejs/plugin-react'
+import ViteEslint from '@nabla/vite-plugin-eslint'
 import ViteHtml from 'vite-plugin-html'
 import ViteLegacy from '@vitejs/plugin-legacy'
 
@@ -26,6 +27,7 @@ export default defineConfig(({command, mode, ...rest }) => {
   };
 
   const plugins = [
+    ViteEslint(),
     ViteReact({
       fastRefresh: process.env.NODE_ENV !== 'test',
       // Exclude storybook stories
@@ -45,7 +47,7 @@ export default defineConfig(({command, mode, ...rest }) => {
       }
     }),
     ViteHtml({
-      minify: false,
+      minify: isProd && isBuild,
       inject: {
         data: {
           title: `Open Sauced v${process.env.npm_package_version}`,
@@ -53,6 +55,18 @@ export default defineConfig(({command, mode, ...rest }) => {
       },
     })
   ];
+
+  // broken until we figure out how to automate it w/wo workbox
+  // isProd && (build.manifest = true);
+
+  isBuild && isLegacy && plugins.push(
+    ViteLegacy({
+      targets: [
+        'defaults',
+        'not IE 11'
+      ]
+    })
+  );
 
   return {
     base: "/",
