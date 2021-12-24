@@ -48,13 +48,10 @@ Open Sauced provides structured onboarding for new contributors to open source. 
 
 ## 📖 Prerequisites
 
-### Local development
+In order to run the project from a container we need `node>=14`, `npm>=7` and `docker>=20` installed on our development machines or
+use one of the listed cloud providers we support:
 
-In order to run the project from a container we need `node>=14`, `npm>=7` and `docker>=20` installed on our development machines.
-
-### Cloud development
-
-#### Gitpod
+### Gitpod
 
 > ✅ can be used as IDE replacement
 
@@ -66,7 +63,7 @@ For [Vite](https://vitejs.dev) to work with Gitpod we need to use [a custom Dock
 
 Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should work out of the box in multiple [contribution scenarios](https://www.gitpod.io/docs/references/gitpod-yml).
 
-#### Replit
+### Replit
 
 > ✅ can be used as IDE replacement
 
@@ -76,23 +73,17 @@ Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should wo
 
 Open Sauced is configured with a shell environment supporting node@16 and npm@8. The build environment script lives in [shell.nix](./shell.nix) and the [repl config](https://docs.replit.com/programming-ide/configuring-repl) lives in [.replit](./replit). 
 
-## 🤝 Contributing
+### Codesandbox
 
-We encourage you to contribute to Open Sauced! Please check out the [Contributing guide](https://docs.opensauced.pizza/contributing/introduction-to-contributing/) for guidelines about how to proceed.
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-sb-demo/tree/main/?fontsize=14&hidenavigation=1&theme=dark)
 
-We have a commit utility called [@open-sauced/conventional-commit](https://github.com/open-sauced/conventional-commit) that helps you write your commits in a way that is easy to understand and process by others.
+### Stackblitz
 
-It is generally integrated as an `npm` script but you can run it with `npx` as well:
+[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-sb-demo)
 
-```shell
-npm run push
-```
+### Glitch
 
-For any other npm based project or dotnpmrc defaulting to `--yes`:
-
-```shell
-npx -y @open-sauced/conventional-commit
-```
+[![Remix on Glitch](https://cdn.gomix.com/f3620a78-0ad3-4f81-a271-c8a4faa20f86%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-sb-demo)
 
 <img align="right" src="https://i.ibb.co/CJfW18H/ship.gif" width="200"/>
 
@@ -139,7 +130,6 @@ To fix the linting errors, use the following command:
 ```shell
 npm run format
 ```
-
 
 ### 🚀 Production deployment
 
@@ -190,6 +180,24 @@ This project supports "dark mode" styling, and by default it will follow the col
 ### 📝 Markdown Support
 
 This project leverages [Remirror](https://remirror.io/) for a delightful experience in documenting your Open Source goals. The editor supports markdown features including heading levels, bulleted lists, text formatting, code snippets, and emojis!
+
+## 🤝 Contributing
+
+We encourage you to contribute to Open Sauced! Please check out the [Contributing guide](https://docs.opensauced.pizza/contributing/introduction-to-contributing/) for guidelines about how to proceed.
+
+We have a commit utility called [@open-sauced/conventional-commit](https://github.com/open-sauced/conventional-commit) that helps you write your commits in a way that is easy to understand and process by others.
+
+It is generally integrated as an `npm` script but you can run it with `npx` as well:
+
+```shell
+npm run push
+```
+
+For any other npm based project or dotnpmrc defaulting to `--yes`:
+
+```shell
+npx -y @open-sauced/conventional-commit
+```
 
 ## 🍕 Community
 
