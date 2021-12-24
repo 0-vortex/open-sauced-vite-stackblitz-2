@@ -1,4 +1,23 @@
 {
   "start": "npm start",
-  "install": "npm ci"
+  "install": "npm ci",
+  "watch": {
+    "install": {
+      "include": [
+        "^package\\.json$",
+        "^\\.env$"
+      ],
+      "restart": {
+        "exclude": [
+          "^public/",
+          "^src/",
+          "^stories/"
+        ],
+        "include": [
+          "^glitch\\.json$"
+        ]
+      }
+    },
+    "throttle": 100
+  }
 }

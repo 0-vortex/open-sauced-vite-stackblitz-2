@@ -79,13 +79,15 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 ### Stackblitz
 
+> ⭕ GitHub rate limitations can make contributing difficult
+
 [![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-sb-demo)
 
 ### Glitch
 
 > ✅ can be used as IDE replacement
 
-> ⭕ not all npm scripts are available
+> ⭕ GitHub rate limitations can make contributing difficult
 > 
 > ⭕ deployment and testing require extra steps
 
