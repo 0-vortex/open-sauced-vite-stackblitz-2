@@ -6,6 +6,7 @@ import ViteHtml from 'vite-plugin-html'
 export default defineConfig({
   plugins: [
     ViteReact({
+      fastRefresh: process.env.NODE_ENV !== 'test',
       // Exclude storybook stories
       exclude: /\.stories\.(t|j)sx?$/,
       // Only .jsx files
