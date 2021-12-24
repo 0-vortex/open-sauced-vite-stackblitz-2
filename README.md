@@ -83,6 +83,12 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 ### Glitch
 
+> ✅ can be used as IDE replacement
+
+> ⭕ not all npm scripts are available
+> 
+> ⭕ deployment and testing require extra steps
+
 [![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-sb-demo)
 
 <img align="right" src="https://i.ibb.co/CJfW18H/ship.gif" width="200"/>

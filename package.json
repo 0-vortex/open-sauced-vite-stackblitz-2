@@ -13,7 +13,7 @@
     "url": "git+ssh://git@github.com/0-vortex/open-sauced-vite-sb-demo.git"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=16",
     "npm": ">=7"
   },
   "scripts": {
