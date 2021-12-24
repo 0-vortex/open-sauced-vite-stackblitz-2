@@ -83,7 +83,7 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 ### Glitch
 
-[![Remix on Glitch](https://cdn.gomix.com/f3620a78-0ad3-4f81-a271-c8a4faa20f86%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-sb-demo)
+[![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-sb-demo)
 
 <img align="right" src="https://i.ibb.co/CJfW18H/ship.gif" width="200"/>
 
