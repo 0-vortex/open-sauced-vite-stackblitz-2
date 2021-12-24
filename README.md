@@ -56,11 +56,25 @@ In order to run the project from a container we need `node>=14`, `npm>=7` and `d
 
 #### Gitpod
 
-> [x] can be used as IDE replacement
+> ✅ can be used as IDE replacement
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/0-vortex/open-sauced-vite-sb-demo)
 
 [Gitpod](https://www.gitpod.io) is mostly free but has [extensive documentation](https://www.gitpod.io/docs/develop) for all its contributing features.
+
+For [Vite](https://vitejs.dev) to work with Gitpod we need to use [a custom Dockerfile](https://www.gitpod.io/docs/config-docker) that lives under [.gitpod.Dockerfile](./.gitpod.Dockerfile).
+
+Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should work out of the box in multiple [contribution scenarios](https://www.gitpod.io/docs/references/gitpod-yml).
+
+#### Replit
+
+> ✅ can be used as IDE replacement
+
+[![Open in Replit](https://repl.it/badge/github/0-vortex/open-sauced-vite-sb-demo)](https://repl.it/github/0-vortex/open-sauced-vite-sb-demo)
+
+[Replit](https://replit.com/) is an old service that recently supported [NixOS](https://nixos.org/guides/nix-pills/enter-environment.html), enabling full customisation of the runner and project.
+
+Open Sauced is configured with a shell environment supporting node@16 and npm@8. The build environment script lives in [shell.nix](./shell.nix) and the [repl config](https://docs.replit.com/programming-ide/configuring-repl) lives in [.replit](./replit). 
 
 ## 🤝 Contributing
 
