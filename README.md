@@ -48,7 +48,19 @@ Open Sauced provides structured onboarding for new contributors to open source. 
 
 ## 📖 Prerequisites
 
+### Local development
+
 In order to run the project from a container we need `node>=14`, `npm>=7` and `docker>=20` installed on our development machines.
+
+### Cloud development
+
+#### Gitpod
+
+> [x] can be used as IDE replacement
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/0-vortex/open-sauced-vite-sb-demo)
+
+[Gitpod](https://www.gitpod.io) is mostly free but has [extensive documentation](https://www.gitpod.io/docs/develop) for all its contributing features.
 
 ## 🤝 Contributing
 
@@ -59,10 +71,12 @@ We have a commit utility called [@open-sauced/conventional-commit](https://githu
 It is generally integrated as an `npm` script but you can run it with `npx` as well:
 
 ```shell
-# from package.json
 npm run push
+```
 
-# for any other npm based project
+For any other npm based project or dotnpmrc defaulting to `--yes`:
+
+```shell
 npx -y @open-sauced/conventional-commit
 ```
 
