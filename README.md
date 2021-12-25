@@ -55,7 +55,7 @@ use one of the listed cloud providers we support:
 
 > ✅ can be used as IDE replacement
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/0-vortex/open-sauced-vite-sb-demo)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/0-vortex/open-sauced-vite-stackblitz-2)
 
 [Gitpod](https://www.gitpod.io) is mostly free but has [extensive documentation](https://www.gitpod.io/docs/develop) for all its contributing features.
 
@@ -67,7 +67,7 @@ Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should wo
 
 > ✅ can be used as IDE replacement
 
-[![Open in Replit](https://repl.it/badge/github/0-vortex/open-sauced-vite-sb-demo)](https://repl.it/github/0-vortex/open-sauced-vite-sb-demo)
+[![Open in Replit](https://repl.it/badge/github/0-vortex/open-sauced-vite-stackblitz-2)](https://repl.it/github/0-vortex/open-sauced-vite-stackblitz-2)
 
 [Replit](https://replit.com/) is an old service that recently supported [NixOS](https://nixos.org/guides/nix-pills/enter-environment.html), enabling full customisation of the runner and project.
 
@@ -77,13 +77,13 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 > ✅ can be used as editor replacement
 
-[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-sb-demo/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
 
 ### Stackblitz
 
 > ⭕ GitHub rate limitations can make contributing difficult
 
-[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-sb-demo)
+[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-stackblitz-2)
 
 ### Glitch
 
@@ -93,7 +93,7 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 > 
 > ⭕ deployment and testing require extra steps
 
-[![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-sb-demo)
+[![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-stackblitz-2)
 
 <img align="right" src="https://i.ibb.co/CJfW18H/ship.gif" width="200"/>
 

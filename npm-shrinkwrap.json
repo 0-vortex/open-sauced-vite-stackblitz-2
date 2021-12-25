@@ -1,11 +1,11 @@
 {
-  "name": "open-sauced-vite-sb-demo",
+  "name": "open-sauced-vite-stackblitz-2",
   "version": "0.41.1",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
-      "name": "open-sauced-vite-sb-demo",
+      "name": "open-sauced-vite-stackblitz-2",
       "version": "0.41.1",
       "license": "MIT",
       "dependencies": {
