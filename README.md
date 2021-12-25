@@ -75,7 +75,9 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 ### Codesandbox
 
-[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-sb-demo/tree/main/?fontsize=14&hidenavigation=1&theme=dark)
+> ✅ can be used as editor replacement
+
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-sb-demo/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
 
 ### Stackblitz
 
@@ -85,7 +87,7 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 ### Glitch
 
-> ✅ can be used as IDE replacement
+> ✅ can be used as editor replacement
 
 > ⭕ GitHub rate limitations can make contributing difficult
 > 
