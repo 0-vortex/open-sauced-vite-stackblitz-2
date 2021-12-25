@@ -1,8 +1,24 @@
 {
-  "audit": false,
-  "audit-level": "moderate",
-  "lockfile-version": 3,
-  "loglevel": "info",
+  "installMode": "json",
+  "warnings": {
+    "npm": true,
+    "yarn": false
+  },
+  "preferFullInstall": false,
+  "fetchRetries": 2,
+  "init": {
+    "scope": "",
+    "fields": {}
+  },
+  "loglevel": "verbose",
+  "lockFile": true,
+  "lockOnly": false,
   "progress": false,
-  "timing": false
+  "save": true,
+  "saveDev": false,
+  "saveExact": false,
+  "saveOptional": false,
+  "savePrefix": "^",
+  "disablePolyfills": false,
+  "lockfile-version": 3
 }
