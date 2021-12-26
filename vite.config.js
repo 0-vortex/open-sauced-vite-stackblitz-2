@@ -93,11 +93,12 @@ console.log(mode);
 
   return {
     base: "/",
-    mode,
+    mode: "development",
     publicDir: "public",
     plugins: config.plugins,
     server: {
       host: true,
+      https: true,
       port: 3000,
       hmr: {
         port: 443,
