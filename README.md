@@ -77,6 +77,8 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 > ✅ can be used as editor replacement
 
+> ⭕ enforces custom package manager limitation
+
 [![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
 
 ### Stackblitz
