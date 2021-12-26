@@ -87,7 +87,7 @@ export default defineConfig(({command, mode, ...rest }) => {
   );
 
   // cloud container specific build options
-  isGitpodBuild && (config.server.hmr = {
+  isCloudIdeBuild && (config.server.hmr = {
     port: 443,
   });
 
