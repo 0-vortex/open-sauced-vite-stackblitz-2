@@ -91,9 +91,13 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
 
   // cloud container specific build options
   if (isStackblitzBuild) {
-    config.mode = "development";
     const { stdout } = sync("hostname");
-    console.log(`${stdout}--${config.server.port}`);
+    config.base = `https://${stdout}--${config.server.port}.local.webcontainer.io`;
+  }
+
+  if (isCodeSandboxBuild) {
+    const [type, sendbox, id] = process.env.HOSTNAME.split('-');
+    config.base = `https://${id}.${type}.code${sendbox}.io`;
   }
 
   isCloudIdeBuild && (config.server.hmr = {
