@@ -47,7 +47,7 @@ export default defineConfig(({command, mode, ...rest }) => {
 
   config.plugins.push(
     ViteReact({
-      fastRefresh: process.env.NODE_ENV !== 'test',
+      fastRefresh: !(isCodeSandboxBuild || process.env.NODE_ENV === 'test'),
       // Exclude storybook stories
       exclude: /\.stories\.(t|j)sx?$/,
       // Only .jsx files
@@ -91,5 +91,13 @@ export default defineConfig(({command, mode, ...rest }) => {
     port: 443,
   });
 
-  return config;
+  return {
+    server: {
+      host: true,
+      hmr: {
+        port: 443,
+      },
+    }
+  }
+  // return config;
 });
