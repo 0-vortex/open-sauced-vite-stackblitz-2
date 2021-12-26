@@ -19,7 +19,7 @@ export default defineConfig(({command, mode, ...rest }) => {
   const isGitpodBuild = process.env.GITPOD_WORKSPACE_URL || false;
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
   const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild;
-console.log(mode);
+
   const config = {
     base: "/",
     mode,
@@ -47,22 +47,22 @@ console.log(mode);
 
   config.plugins.push(
     ViteReact({
-      fastRefresh: !(isCodeSandboxBuild || process.env.NODE_ENV === 'test'),
-      // Exclude storybook stories
-      exclude: /\.stories\.(t|j)sx?$/,
-      // Only .jsx files
-      include: "**/*.jsx",
-      babel: {
-        plugins: [
-          [
-            'babel-plugin-styled-components',
-            {
-              displayName: true,
-              fileName: false
-            }
-          ]
-        ]
-      }
+      // fastRefresh: !(isCodeSandboxBuild || process.env.NODE_ENV === 'test'),
+      // // Exclude storybook stories
+      // exclude: /\.stories\.(t|j)sx?$/,
+      // // Only .jsx files
+      // include: "**/*.jsx",
+      // babel: {
+      //   plugins: [
+      //     [
+      //       'babel-plugin-styled-components',
+      //       {
+      //         displayName: true,
+      //         fileName: false
+      //       }
+      //     ]
+      //   ]
+      // }
     })
   );
 
@@ -92,14 +92,14 @@ console.log(mode);
   });
 
   return {
-    base: "/",
-    mode: "development",
-    publicDir: "public",
+    // base: "/",
+    // mode,
+    // publicDir: "public",
     plugins: config.plugins,
     server: {
-      host: true,
-      https: true,
-      port: 3000,
+      // host: true,
+      // https: true,
+      // port: 3000,
       hmr: {
         port: 443,
       },
