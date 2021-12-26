@@ -92,11 +92,28 @@ export default defineConfig(({command, mode, ...rest }) => {
   });
 
   return {
+    base: "/",
+    mode,
+    plugins: [],
+    publicDir: "public",
     server: {
       host: true,
+      port: 3000,
+      // strictPort: true,
+      open: !isCloudIdeBuild,
       hmr: {
         port: 443,
       },
+    },
+    build: {
+      outDir: "build",
+      assetsDir: "static",
+      sourcemap: !isDev,
+      rollupOptions: {},
+      manifest: false,
+    },
+    preview: {
+      port: 3000,
     }
   }
   // return config;
