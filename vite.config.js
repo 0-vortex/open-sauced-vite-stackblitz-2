@@ -3,6 +3,7 @@ import ViteReact from '@vitejs/plugin-react'
 import ViteEslint from '@nabla/vite-plugin-eslint'
 import ViteHtml from 'vite-plugin-html'
 import ViteLegacy from '@vitejs/plugin-legacy'
+import { sync } from 'execa'
 
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode, ...rest }) => {
@@ -17,8 +18,9 @@ export default defineConfig(({command, mode, ...rest }) => {
   // figure out custom build options
   const isLegacy = process.env.VITE_LEGACY || false;
   const isGitpodBuild = process.env.GITPOD_WORKSPACE_URL || false;
+  const isStackblitzBuild = process.env.STACKBLITZ_ENV || false;
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
-  const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild;
+  const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild || isStackblitzBuild;
 
   const config = {
     base: "/",
@@ -87,6 +89,10 @@ export default defineConfig(({command, mode, ...rest }) => {
   );
 
   // cloud container specific build options
+  if (isStackblitzBuild) {
+    console.log(sync("hostname"));
+  }
+
   isCloudIdeBuild && (config.server.hmr = {
     port: 443,
   });

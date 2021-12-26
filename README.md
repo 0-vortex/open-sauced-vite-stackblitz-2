@@ -73,28 +73,30 @@ Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should wo
 
 Open Sauced is configured with a shell environment supporting node@16 and npm@8. The build environment script lives in [shell.nix](./shell.nix) and the [repl config](https://docs.replit.com/programming-ide/configuring-repl) lives in [.replit](./replit). 
 
+### Stackblitz
+
+> ✅ can be used as editor replacement
+
+> ⭕ does not support npm package manager
+
+[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-stackblitz-2)
+
 ### Codesandbox
 
 > ✅ can be used as editor replacement
+>
+> ✅ supports deployment preview
  
 > ⭕ does not support npm package manager
 >
-> ⭕ hot module reload requires additional setup
+> ⭕ does not support hot module reload
 
 [![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
-
-### Stackblitz
-
-> ⭕ GitHub rate limitations can make contributing difficult
-
-[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-stackblitz-2)
 
 ### Glitch
 
 > ✅ can be used as editor replacement
-
-> ⭕ GitHub rate limitations can make contributing difficult
-> 
+ 
 > ⭕ deployment and testing require extra steps
 
 [![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-stackblitz-2)
