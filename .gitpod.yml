@@ -32,7 +32,6 @@ vscode:
   extensions:
     - dbaeumer.vscode-eslint
     - mikestead.dotenv
-    - github.codespaces
     - eg2.vscode-npm-script
     - editorconfig.editorconfig
     - christian-kohler.npm-intellisense
