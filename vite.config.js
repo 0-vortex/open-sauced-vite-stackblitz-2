@@ -27,9 +27,9 @@ console.log(mode);
     publicDir: "public",
     server: {
       host: true,
-      // port: 3000,
-      // strictPort: true,
-      // open: !isCloudIdeBuild,
+      port: 3000,
+      strictPort: true,
+      open: !isCloudIdeBuild,
     },
     build: {
       outDir: "build",
@@ -91,6 +91,14 @@ console.log(mode);
     port: 443,
   });
 
-
+  return {
+    plugins: config.plugins,
+    server: {
+      host: true,
+      hmr: {
+        port: 443,
+      },
+    }
+  }
   return config;
 });
