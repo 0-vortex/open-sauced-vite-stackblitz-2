@@ -43,7 +43,7 @@ export default defineConfig(({command, mode, ...rest }) => {
     }
   };
 
-  config.plugins.push(ViteEslint());
+  // config.plugins.push(ViteEslint());
 
   config.plugins.push(
     ViteReact({
@@ -66,55 +66,31 @@ export default defineConfig(({command, mode, ...rest }) => {
     })
   );
 
-  config.plugins.push(
-    ViteHtml({
-      minify: isProd && isBuild,
-      inject: {
-        data: {
-          title: `Open Sauced v${process.env.npm_package_version}`,
-        },
-      },
-    })
-  );
-
-  isBuild && isLegacy && config.plugins.push(
-    ViteLegacy({
-      targets: [
-        'defaults',
-        'not IE 11'
-      ]
-    })
-  );
+  // config.plugins.push(
+  //   ViteHtml({
+  //     minify: isProd && isBuild,
+  //     inject: {
+  //       data: {
+  //         title: `Open Sauced v${process.env.npm_package_version}`,
+  //       },
+  //     },
+  //   })
+  // );
+  //
+  // isBuild && isLegacy && config.plugins.push(
+  //   ViteLegacy({
+  //     targets: [
+  //       'defaults',
+  //       'not IE 11'
+  //     ]
+  //   })
+  // );
 
   // cloud container specific build options
   isCloudIdeBuild && (config.server.hmr = {
     port: 443,
   });
 
-  return {
-    base: "/",
-    mode,
-    plugins: [],
-    publicDir: "public",
-    server: {
-      host: true,
-      port: 3000,
-      // strictPort: true,
-      open: !isCloudIdeBuild,
-      hmr: {
-        port: 443,
-      },
-    },
-    build: {
-      outDir: "build",
-      assetsDir: "static",
-      sourcemap: !isDev,
-      rollupOptions: {},
-      manifest: false,
-    },
-    preview: {
-      port: 3000,
-    }
-  }
-  // return config;
+
+  return config;
 });
