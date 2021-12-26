@@ -89,20 +89,20 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
     })
   );
 
-  // cloud container specific build options
+  // cloud container shared and specific build options
+  isCloudIdeBuild && (config.server.hmr = {
+    port: 443,
+  });
+
   if (isStackblitzBuild) {
     const { stdout } = sync("hostname");
-    config.base = `https://${stdout}--${config.server.port}.local.webcontainer.io`;
+    config.base = `https://${stdout}--${config.server.port}.local.webcontainer.io/`;
   }
 
   if (isCodeSandboxBuild) {
     const [type, sendbox, id] = process.env.HOSTNAME.split('-');
-    config.base = `https://${id}.${type}.code${sendbox}.io`;
+    config.base = `https://${id}.${type}.code${sendbox}.io/`;
   }
-
-  isCloudIdeBuild && (config.server.hmr = {
-    port: 443,
-  });
 
   return config;
 });
