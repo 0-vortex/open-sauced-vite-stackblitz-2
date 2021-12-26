@@ -53,7 +53,7 @@ use one of the listed cloud providers we support:
 
 ### Gitpod
 
-> ✅ can be used as IDE replacement
+> ✅ fully usable as IDE replacement
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/0-vortex/open-sauced-vite-stackblitz-2)
 
@@ -65,7 +65,7 @@ Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should wo
 
 ### Replit
 
-> ✅ can be used as IDE replacement
+> ✅ fully usable as IDE replacement
 
 [![Open in Replit](https://repl.it/badge/github/0-vortex/open-sauced-vite-stackblitz-2)](https://repl.it/github/0-vortex/open-sauced-vite-stackblitz-2)
 
@@ -76,8 +76,10 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 ### Codesandbox
 
 > ✅ can be used as editor replacement
-
-> ⭕ enforces custom package manager limitation
+ 
+> ⭕ does not support npm package manager
+>
+> ⭕ hot module reload requires additional setup
 
 [![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
 
