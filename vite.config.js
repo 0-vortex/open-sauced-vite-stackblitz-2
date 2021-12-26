@@ -28,8 +28,9 @@ export default defineConfig(({command, mode, ...rest }) => {
     server: {
       host: true,
       port: 3000,
-      strictPort: true,
-      open: !isCloudIdeBuild,
+      // strictPort: true,
+      // open: !isCloudIdeBuild,
+      open: true
     },
     build: {
       outDir: "build",
