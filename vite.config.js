@@ -48,21 +48,21 @@ export default defineConfig(({command, mode, ...rest }) => {
   config.plugins.push(
     ViteReact({
       // fastRefresh: !(isCodeSandboxBuild || process.env.NODE_ENV === 'test'),
-      // // Exclude storybook stories
-      // exclude: /\.stories\.(t|j)sx?$/,
-      // // Only .jsx files
-      // include: "**/*.jsx",
-      // babel: {
-      //   plugins: [
-      //     [
-      //       'babel-plugin-styled-components',
-      //       {
-      //         displayName: true,
-      //         fileName: false
-      //       }
-      //     ]
-      //   ]
-      // }
+      // Exclude storybook stories
+      exclude: /\.stories\.(t|j)sx?$/,
+      // Only .jsx files
+      include: "**/*.jsx",
+      babel: {
+        plugins: [
+          [
+            'babel-plugin-styled-components',
+            {
+              displayName: true,
+              fileName: false
+            }
+          ]
+        ]
+      }
     })
   );
 
@@ -97,7 +97,7 @@ export default defineConfig(({command, mode, ...rest }) => {
     // publicDir: "public",
     plugins: config.plugins,
     server: {
-      // host: true,
+      host: true,
       // https: true,
       // port: 3000,
       hmr: {
