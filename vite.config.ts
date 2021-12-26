@@ -4,9 +4,10 @@ import ViteEslint from '@nabla/vite-plugin-eslint'
 import ViteHtml from 'vite-plugin-html'
 import ViteLegacy from '@vitejs/plugin-legacy'
 import { sync } from 'execa'
+import type { ConfigEnv, UserConfig } from 'vite'
 
 // https://vitejs.dev/config/
-export default defineConfig(({command, mode, ...rest }) => {
+export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig => {
   // figure out commands
   const isBuild = command === 'build';
 
@@ -22,7 +23,7 @@ export default defineConfig(({command, mode, ...rest }) => {
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
   const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild || isStackblitzBuild;
 
-  const config = {
+  const config:UserConfig = {
     base: "/",
     mode,
     plugins: [],
@@ -90,7 +91,9 @@ export default defineConfig(({command, mode, ...rest }) => {
 
   // cloud container specific build options
   if (isStackblitzBuild) {
-    console.log(sync("hostname"));
+    config.mode = "development";
+    const { stdout } = sync("hostname");
+    console.log(`${stdout}--${config.server.port}`);
   }
 
   isCloudIdeBuild && (config.server.hmr = {
