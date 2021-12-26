@@ -1,27 +1,36 @@
 image:
   file: .gitpod.Dockerfile
 
-tasks:
-  - init: npm ci
-    command: npm start
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: false
+    addComment: false
+    addBadge: true
 
 ports:
   - port: 3000
     onOpen: open-preview
 
-github:
-  prebuilds:
-    # enable for the default branch (defaults to true)
-    main: true
-    # enable for all branches in this repo (defaults to false)
-    branches: true
-    # enable for pull requests coming from this repo (defaults to true)
-    pullRequests: true
-    # enable for pull requests coming from forks (defaults to false)
-    pullRequestsFromForks: true
-    # add a check to pull requests (defaults to true)
-    addCheck: true
-    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
-    addComment: true
-    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
-    addBadge: false
+tasks:
+  - name: Run vite dev
+    init: >
+      npm ci
+      gp sync-done build
+    command: npm start
+  - name: Run jest tests
+    init: gp sync-await build
+    command: npm t
+    openMode: tab-after
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - mikestead.dotenv
+    - github.codespaces
+    - eg2.vscode-npm-script
+    - editorconfig.editorconfig
+    - christian-kohler.npm-intellisense
