@@ -6,6 +6,6 @@
   "container": {
     "port": 3000,
     "startScript": "ide:csb",
-    "node": "16.12.0"
+    "node": "16"
   }
 }

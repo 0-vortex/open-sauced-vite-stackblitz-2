@@ -93,7 +93,7 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 > 
 > ⭕ low resources [free tier limitations](https://codesandbox.io/docs/faq#are-there-any-limitations-with-sandboxes)
 
-[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console)
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2/tree/main/?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console&runonclick=1)
 
 ### Glitch
 
