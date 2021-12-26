@@ -20,16 +20,32 @@ export default defineConfig(({command, mode, ...rest }) => {
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
   const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild;
 
-  const build = {
-    outDir: "build",
-    assetsDir: "static",
-    sourcemap: !isDev,
-    rollupOptions: {},
-    manifest: false,
+  const config = {
+    base: "/",
+    mode,
+    plugins: [],
+    publicDir: "public",
+    server: {
+      host: true,
+      port: 3000,
+      strictPort: true,
+      open: !isCloudIdeBuild,
+    },
+    build: {
+      outDir: "build",
+      assetsDir: "static",
+      sourcemap: !isDev,
+      rollupOptions: {},
+      manifest: false,
+    },
+    preview: {
+      port: 3000,
+    }
   };
 
-  const plugins = [
-    ViteEslint(),
+  config.plugins.push(ViteEslint());
+
+  config.plugins.push(
     ViteReact({
       fastRefresh: process.env.NODE_ENV !== 'test',
       // Exclude storybook stories
@@ -47,7 +63,10 @@ export default defineConfig(({command, mode, ...rest }) => {
           ]
         ]
       }
-    }),
+    })
+  );
+
+  config.plugins.push(
     ViteHtml({
       minify: isProd && isBuild,
       inject: {
@@ -56,12 +75,9 @@ export default defineConfig(({command, mode, ...rest }) => {
         },
       },
     })
-  ];
+  );
 
-  // broken until we figure out how to automate it w/wo workbox
-  // isProd && (build.manifest = true);
-
-  isBuild && isLegacy && plugins.push(
+  isBuild && isLegacy && config.plugins.push(
     ViteLegacy({
       targets: [
         'defaults',
@@ -70,18 +86,10 @@ export default defineConfig(({command, mode, ...rest }) => {
     })
   );
 
-  return {
-    base: "/",
-    mode,
-    plugins,
-    publicDir: "public",
-    server: {
-      port: 3000,
-      open: !isCloudIdeBuild,
-    },
-    build,
-    preview: {
-      port: 3000,
-    }
-  };
+  // cloud container specific build options
+  isGitpodBuild && (config.server.hmr = {
+    port: 443,
+  });
+
+  return config;
 });
