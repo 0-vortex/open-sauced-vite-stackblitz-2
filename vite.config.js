@@ -19,7 +19,7 @@ export default defineConfig(({command, mode, ...rest }) => {
   const isGitpodBuild = process.env.GITPOD_WORKSPACE_URL || false;
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
   const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild;
-
+console.log(mode);
   const config = {
     base: "/",
     mode,
@@ -27,9 +27,9 @@ export default defineConfig(({command, mode, ...rest }) => {
     publicDir: "public",
     server: {
       host: true,
-      port: 3000,
-      strictPort: true,
-      open: !isCloudIdeBuild,
+      // port: 3000,
+      // strictPort: true,
+      // open: !isCloudIdeBuild,
     },
     build: {
       outDir: "build",
