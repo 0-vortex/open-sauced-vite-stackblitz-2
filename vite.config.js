@@ -92,6 +92,9 @@ console.log(mode);
   });
 
   return {
+    base: "/",
+    mode,
+    publicDir: "public",
     plugins: config.plugins,
     server: {
       host: true,
