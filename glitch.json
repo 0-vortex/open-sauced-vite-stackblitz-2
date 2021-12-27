@@ -1,23 +1,27 @@
 {
-  "start": "npm start",
-  "install": "npm ci",
+  "projectType": "generated_static",
+  "buildDirectory": "build",
+  "install": "enable-npm && npm ci",
+  "start": "npm run ide:csb",
   "watch": {
     "install": {
-      "include": [
-        "^package\\.json$",
-        "^\\.env$"
-      ],
-      "restart": {
-        "exclude": [
-          "^public/",
-          "^src/",
-          "^stories/"
-        ],
+      "install": {
         "include": [
-          "^glitch\\.json$"
+          "^package\\.json$"
+        ],
+        "exclude": []
+      },
+      "restart": {
+        "include": [
+          "^\\.env$",
+          "^backend/"
+        ],
+        "exclude": [
+          "src/",
+          "stories/"
         ]
-      }
-    },
-    "throttle": 100
+      },
+      "noSavedEvents": true
+    }
   }
 }

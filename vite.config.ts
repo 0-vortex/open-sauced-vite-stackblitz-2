@@ -21,7 +21,8 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
   const isGitpodBuild = process.env.GITPOD_WORKSPACE_URL || false;
   const isStackblitzBuild = process.env.STACKBLITZ_ENV || false;
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
-  const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild || isStackblitzBuild;
+  const isGlitchBuild = process.env.PROJECT_REMIX_CHAIN || false;
+  const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild || isStackblitzBuild || isGlitchBuild;
 
   const config:UserConfig = {
     base: "/",
@@ -100,8 +101,12 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
   }
 
   if (isCodeSandboxBuild) {
-    const [type, sendbox, id] = process.env.HOSTNAME.split('-');
-    config.base = `https://${id}.${type}.code${sendbox}.io/`;
+    const [type, sandbox, id] = process.env.HOSTNAME.split('-');
+    config.base = `https://${id}.${type}.code${sandbox}.io/`;
+  }
+
+  if (isGlitchBuild) {
+    config.base = `https://${process.env.PROJECT_DOMAIN}.glitch.me/`;
   }
 
   return config;
