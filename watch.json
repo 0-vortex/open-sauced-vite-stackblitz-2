@@ -2,20 +2,21 @@
   "install": {
     "include": [
       "^package\\.json$",
-      "^package-lock\\.json$",
-      "^npm-shrinkwrap\\.json$"
+      "^\\.env$"
     ],
     "exclude": []
   },
   "restart": {
     "include": [
-      "^\\.env$",
-      "^backend/"
+      "^watch\\.json$"
     ],
     "exclude": [
-      "src/",
-      "stories/"
+      "^build/",
+      "^public/",
+      "^src/",
+      "^stories/"
     ]
   },
+  "throttle": 100,
   "noSavedEvents": true
 }
