@@ -29,8 +29,7 @@
     "storybook": "npx start-storybook -p 6006",
     "lint": "npx eslint . --report-unused-disable-directives",
     "format": "npm run lint -- --fix",
-    "ide:csb": "npm run build && npm run serve",
-    "ide:gtc": "enable-npm && npm ci"
+    "ide:csb": "npm run build && npm run serve"
   },
   "dependencies": {
     "@apollo/client": "^3.5.6",
@@ -104,5 +103,9 @@
     "vite-plugin-html": "^2.1.1",
     "vite-plugin-pwa": "^0.11.12",
     "web-vitals": "^2.1.2"
+  },
+  "glitch": {
+    "projectType": "generated_static",
+    "buildDirectory": "build"
   }
 }
