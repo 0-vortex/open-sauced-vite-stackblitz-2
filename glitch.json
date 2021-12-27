@@ -1,4 +1,27 @@
 {
   "projectType": "generated_static",
-  "buildDirectory": "build"
+  "buildDirectory": "build",
+  "install": "npm run ide:gtc",
+  "start": "npm run ide:csb",
+  "watch": {
+    "install": {
+      "include": [
+        "^package\\.json$",
+        "^package-lock\\.json$",
+        "^npm-shrinkwrap\\.json$"
+      ],
+      "exclude": []
+    },
+    "restart": {
+      "include": [
+        "^\\.env$",
+        "^backend/"
+      ],
+      "exclude": [
+        "src/",
+        "stories/"
+      ]
+    },
+    "noSavedEvents": true
+  }
 }
