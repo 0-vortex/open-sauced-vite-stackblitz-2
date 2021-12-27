@@ -93,7 +93,7 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 >
 > ✅ supports deployment preview
  
-> ⭕ [enforces custom package manager](https://codesandbox.io/docs/configuration#sandbox-configuration)
+> ⭕ [enforces custom package manager for stability](https://codesandbox.io/docs/configuration#sandbox-configuration)
 >
 > ⭕ does not support stacked hot module reload
 > 
@@ -105,6 +105,10 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 > ✅ can be used as editor replacement
 
+> ✅ supports deployment preview
+
+> ⭕ [enforces custom package manager for stability](https://help.glitch.com/kb/article/59-can-i-change-the-version-of-node-js-my-project-uses/) 
+>
 > ⭕ does not support stacked hot module reload
 > 
 > ⭕ severely low resources [free tier limitations](https://help.glitch.com/kb/article/17-what-are-the-technical-restrictions-for-glitch-projects/)
