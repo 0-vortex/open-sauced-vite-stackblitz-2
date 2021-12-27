@@ -53,7 +53,9 @@ use one of the listed cloud providers we support:
 
 ### Gitpod
 
-> ✅ fully ready integrated development environment
+> ✅ fully ready [integrated development environment](https://www.gitpod.io/docs/editors)
+
+> ⭕ [VS Code settings sync is not ideal](https://github.com/gitpod-io/gitpod/issues/3733)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/0-vortex/open-sauced-vite-stackblitz-2)
 
@@ -65,7 +67,9 @@ Open Sauced comes with a pre-defined [.gitpod.yml](./.gitpod.yml) that should wo
 
 ### Replit
 
-> ✅ fully ready integrated development environment
+> ✅ fully ready [integrated development environment](https://replit.com/site/ide)
+
+> ⭕ [modified contribution workflows](https://docs.replit.com/tutorials/06-github-and-run-button) 
 
 [![Open in Replit](https://repl.it/badge/github/0-vortex/open-sauced-vite-stackblitz-2)](https://repl.it/github/0-vortex/open-sauced-vite-stackblitz-2)
 
@@ -77,7 +81,9 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 > ✅ can be used as editor replacement
 
-> ⭕ does not support npm package manager
+> ⭕ [enforces custom package manager](https://developer.stackblitz.com/docs/platform/turbo/)
+> 
+> ⭕ limited documentation on [container limitations](https://developer.stackblitz.com/docs/platform/project-config)
 
 [![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-stackblitz-2)
 
@@ -87,9 +93,9 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 >
 > ✅ supports deployment preview
  
-> ⭕ does not support npm package manager
+> ⭕ [enforces custom package manager](https://codesandbox.io/docs/configuration#sandbox-configuration)
 >
-> ⭕ does not support hot module reload
+> ⭕ does not support stacked hot module reload
 > 
 > ⭕ low resources [free tier limitations](https://codesandbox.io/docs/faq#are-there-any-limitations-with-sandboxes)
 
