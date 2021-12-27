@@ -87,6 +87,20 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 [![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/0-vortex/open-sauced-vite-stackblitz-2)
 
+### Glitch
+
+> ✅ can be used as editor replacement
+
+> ✅ supports deployment preview
+
+> ⭕ [enforces custom package manager for stability](https://help.glitch.com/kb/article/59-can-i-change-the-version-of-node-js-my-project-uses/)
+>
+> ⭕ does not support stacked hot module reload
+>
+> ⭕ severely low resources [free tier limitations](https://help.glitch.com/kb/article/17-what-are-the-technical-restrictions-for-glitch-projects/)
+
+[![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-stackblitz-2)
+
 ### Codesandbox
 
 > ✅ can be used as editor replacement
@@ -100,20 +114,6 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 > ⭕ low resources [free tier limitations](https://codesandbox.io/docs/faq#are-there-any-limitations-with-sandboxes)
 
 [![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/0-vortex/open-sauced-vite-stackblitz-2?fontsize=14&hidenavigation=1&theme=dark&previewwindow=console&runonclick=1)
-
-### Glitch
-
-> ✅ can be used as editor replacement
-
-> ✅ supports deployment preview
-
-> ⭕ [enforces custom package manager for stability](https://help.glitch.com/kb/article/59-can-i-change-the-version-of-node-js-my-project-uses/) 
->
-> ⭕ does not support stacked hot module reload
-> 
-> ⭕ severely low resources [free tier limitations](https://help.glitch.com/kb/article/17-what-are-the-technical-restrictions-for-glitch-projects/)
-
-[![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-stackblitz-2)
 
 <img align="right" src="https://i.ibb.co/CJfW18H/ship.gif" width="200"/>
 

@@ -5,7 +5,7 @@
   "view": "browser",
   "container": {
     "port": 3000,
-    "startScript": "ide:csb",
+    "startScript": "npm run build && npm run serve",
     "node": "16"
   }
 }
