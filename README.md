@@ -104,8 +104,10 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 ### Glitch
 
 > ✅ can be used as editor replacement
- 
-> ⭕ deployment and testing require extra steps
+
+> ⭕ does not support stacked hot module reload
+> 
+> ⭕ severely low resources [free tier limitations](https://help.glitch.com/kb/article/17-what-are-the-technical-restrictions-for-glitch-projects/)
 
 [![Remix on Glitch](./src/icons/remix-button.svg)](https://glitch.com/edit/#!/import/github/0-vortex/open-sauced-vite-stackblitz-2)
 

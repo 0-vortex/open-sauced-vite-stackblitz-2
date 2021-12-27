@@ -1,8 +1,8 @@
 {
   "projectType": "generated_static",
   "buildDirectory": "build",
-  "install": "enable-npm && npm ci",
-  "start": "npm run ide:csb",
+  "install": "npx -y npm@latest ci",
+  "start": "npx -y npm@latest npm run ide:csb",
   "watch": {
     "install": {
       "install": {
