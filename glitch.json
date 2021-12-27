@@ -1,29 +1,4 @@
 {
   "projectType": "generated_static",
-  "buildDirectory": "build",
-  "install": "ide:gtc",
-  "start": "ide:csb",
-  "watch": {
-    "install": {
-      "install": {
-        "include": [
-          "^package\\.json$",
-          "^package-lock\\.json$",
-          "^npm-shrinkwrap\\.json$"
-        ],
-        "exclude": []
-      },
-      "restart": {
-        "include": [
-          "^\\.env$",
-          "^backend/"
-        ],
-        "exclude": [
-          "src/",
-          "stories/"
-        ]
-      },
-      "noSavedEvents": true
-    }
-  }
+  "buildDirectory": "build"
 }
