@@ -81,7 +81,7 @@ Open Sauced is configured with a shell environment supporting node@16 and npm@8.
 
 > ✅ can be used as editor replacement
 
-> ⭕ [enforces custom package manager](https://developer.stackblitz.com/docs/platform/turbo/)
+> ⭕ [enforces custom package manager for stability](https://developer.stackblitz.com/docs/platform/turbo/)
 > 
 > ⭕ limited documentation on [container limitations](https://developer.stackblitz.com/docs/platform/project-config)
 

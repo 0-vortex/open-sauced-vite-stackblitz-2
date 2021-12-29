@@ -100,13 +100,13 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
     config.base = `https://${stdout}--${config.server.port}.local.webcontainer.io/`;
   }
 
+  if (isGlitchBuild) {
+    config.base = `https://${process.env.PROJECT_DOMAIN}.glitch.me/`;
+  }
+
   if (isCodeSandboxBuild) {
     const [type, sandbox, id] = process.env.HOSTNAME.split('-');
     config.base = `https://${id}.${type}.code${sandbox}.io/`;
-  }
-
-  if (isGlitchBuild) {
-    config.base = `https://${process.env.PROJECT_DOMAIN}.glitch.me/`;
   }
 
   return config;
