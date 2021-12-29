@@ -7,7 +7,7 @@ import { sync } from 'execa'
 import type { ConfigEnv, UserConfig } from 'vite'
 
 // https://vitejs.dev/config/
-export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig => {
+export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   // figure out commands
   const isBuild = command === 'build';
 
@@ -19,10 +19,11 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
   // figure out custom build options
   const isLegacy = process.env.VITE_LEGACY || false;
   const isGitpodBuild = process.env.GITPOD_WORKSPACE_URL || false;
+  const isReplitBuild = process.env.REPL_SLUG || false;
   const isStackblitzBuild = process.env.STACKBLITZ_ENV || false;
   const isCodeSandboxBuild = process.env.CODESANDBOX_SSE || false;
   const isGlitchBuild = process.env.PROJECT_REMIX_CHAIN || false;
-  const isCloudIdeBuild = isGitpodBuild || isCodeSandboxBuild || isStackblitzBuild || isGlitchBuild;
+  const isCloudIdeBuild = isGitpodBuild || isReplitBuild || isStackblitzBuild || isCodeSandboxBuild || isGlitchBuild;
 
   const config:UserConfig = {
     base: "/",
@@ -94,6 +95,14 @@ export default defineConfig(({command, mode, ...rest }: ConfigEnv): UserConfig =
   isCloudIdeBuild && (config.server.hmr = {
     port: 443,
   });
+
+  if (isGitpodBuild) {
+    config.base = process.env.WORKSPACE_URL;
+  }
+
+  if (isReplitBuild) {
+    config.base = `https://${process.env.REPL_SLUG}-${process.env.REPL_OWNER}.repl.co`;
+  }
 
   if (isStackblitzBuild) {
     const { stdout } = sync("hostname");
