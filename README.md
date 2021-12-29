@@ -12,9 +12,6 @@
   <a href="https://github.com/open-sauced/open-sauced/actions/workflows/compliance.yml">
     <img src="https://github.com/open-sauced/open-sauced/actions/workflows/compliance.yml/badge.svg" alt="Compliance" style="max-width: 100%;">
   </a>
-  <a href="https://github.com/open-sauced/open-sauced/actions/workflows/development.yml">
-    <img src="https://github.com/open-sauced/open-sauced/actions/workflows/development.yml/badge.svg" alt="Development" style="max-width: 100%;">
-  </a>
   <a href="https://github.com/open-sauced/open-sauced/actions/workflows/release.yml">
     <img src="https://github.com/open-sauced/open-sauced/actions/workflows/release.yml/badge.svg" alt="Release" style="max-width: 100%;">
   </a>
