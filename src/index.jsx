@@ -11,6 +11,7 @@ import {ApolloProvider, InMemoryCache} from "@apollo/client";
 import api from "./lib/apiGraphQL";
 import {getAppVersion} from "./lib/appVersion";
 import {validateToken} from "./lib/validateToken";
+import { registerSW } from 'virtual:pwa-register';
 
 const apolloClient = new OneGraphApolloClient({
   oneGraphAuth: Config.auth,
@@ -23,21 +24,21 @@ function Index() {
   const [isAdmin, setIsAdmin] = useState(null);
 
   useEffect(() => {
-    // registerSW({
-    //   immediate: true,
-    //   onNeedRefresh: () => {
-    //     console.log('SW needs refresh');
-    //   },
-    //   onOfflineReady: () => {
-    //     console.log('SW is ready to handle offline requests.');
-    //   },
-    //   onRegistered: () => {
-    //     console.log('SW registered');
-    //   },
-    //   onRegisterError: (e) => {
-    //     console.log('SW registration failed', e);
-    //   }
-    // });
+    registerSW({
+      immediate: true,
+      onNeedRefresh: () => {
+        console.log('SW needs refresh');
+      },
+      onOfflineReady: () => {
+        console.log('SW is ready to handle offline requests.');
+      },
+      onRegistered: () => {
+        console.log('SW registered');
+      },
+      onRegisterError: (e) => {
+        console.log('SW registration failed', e);
+      }
+    });
 
     console.log(`%c
  ██████╗ ██████╗ ███████╗███╗   ██╗    ███████╗ █████╗ ██╗   ██╗ ██████╗███████╗██████╗
