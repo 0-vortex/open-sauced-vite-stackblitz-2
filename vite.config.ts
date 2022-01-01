@@ -2,9 +2,11 @@ import { defineConfig } from 'vite'
 import ViteReact from '@vitejs/plugin-react'
 import ViteEslint from '@nabla/vite-plugin-eslint'
 import ViteHtml from 'vite-plugin-html'
+import ViteInspect from 'vite-plugin-inspect'
 import ViteLegacy from '@vitejs/plugin-legacy'
 import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
 import ViteReplace from '@rollup/plugin-replace'
+import ViteTimeReporter from 'vite-plugin-time-reporter'
 import ViteVisualizer from 'rollup-plugin-visualizer'
 import { sync } from 'execa'
 import type { ConfigEnv, UserConfig } from 'vite'
@@ -20,6 +22,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   const isReport = mode === "report";
 
   // figure out custom build options
+  const isTest = process.env.NODE_ENV === 'test';
   const isLegacy = process.env.VITE_LEGACY || false;
   const isGitpodBuild = process.env.GITPOD_WORKSPACE_URL || false;
   const isReplitBuild = process.env.REPL_SLUG || false;
@@ -33,6 +36,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
     mode,
     plugins: [],
     publicDir: "public",
+    clearScreen: true,
     server: {
       host: true,
       port: 3000,
@@ -51,11 +55,12 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
     }
   };
 
-  config.plugins.push(ViteEslint());
-
   config.plugins.push(
+    ViteTimeReporter(),
+    ViteEslint(),
+    ViteInspect(),
     ViteReact({
-      // fastRefresh: !(isCodeSandboxBuild || process.env.NODE_ENV === 'test'),
+      fastRefresh: !isTest,
       // Exclude storybook stories
       exclude: /\.stories\.(t|j)sx?$/,
       // Only .jsx files
@@ -71,10 +76,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
           ]
         ]
       }
-    })
-  );
-
-  config.plugins.push(
+    }),
     ViteHtml({
       minify: isProd && isBuild,
       inject: {
@@ -103,6 +105,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   );
 
   const pwaOptions: Partial<VitePWAOptions> = {
+    disable: !isProd,
     includeAssets: [
       'favicon.svg',
       'favicon.ico',
@@ -128,20 +131,19 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
       ],
     },
     registerType: 'autoUpdate',
-    strategies: 'generateSW',
-    srcDir: 'src'
+    strategies: 'injectManifest',
+    srcDir: 'src',
+    filename: 'claims-sw.ts',
+    injectManifest: {
+      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024
+    }
   };
+
   const replaceOptions = {
     preventAssignment: true,
     __DATE__: new Date().toISOString(),
+    __RELOAD_SW__: true,
   };
-
-  const reload = process.env.RELOAD_SW === 'true';
-
-  if (reload) {
-    // @ts-ignore
-    replaceOptions.__RELOAD_SW__ = 'true'
-  }
 
   config.plugins.push(
     VitePWA(pwaOptions),
