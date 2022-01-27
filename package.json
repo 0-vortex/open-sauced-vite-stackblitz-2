@@ -39,7 +39,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@primer/octicons-react": "^16.2.0",
-    "@remirror/extension-bold": "^1.0.12",
+    "@remirror/extension-bold": "^1.0.13",
     "@remirror/extension-code": "^1.0.13",
     "@remirror/extension-emoji": "^1.0.13",
     "@remirror/extension-heading": "^1.0.12",
